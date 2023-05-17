@@ -1,0 +1,121 @@
+.header__menu {
+    width: 48px;
+    height: 48px;
+    background-image: url(../img/Menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.header {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__image {
+    padding: 0.5em;
+}
+
+.menu-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.container__menu-button:checked ~ .menu-list {
+    display: block;
+}
+
+.container__menu-button {
+    display: none;
+}
+
+.menu-list__title,
+.menu-list__option {
+    background-color: var(--white);
+    padding: 1em;
+}
+
+.menu-list__title {
+    color: var(--orange);
+    font-weight: 700;
+}
+
+.menu-list__link {
+    background: var(--blue-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.container__logo-title {
+    display: none;
+}
+
+.options {
+    display: none
+}
+
+@media screen and (min-width: 1024px) {
+    .container__logo-title,
+    .container__logo-title-bold {
+        display: inline;
+        font-family: var(--font-secondary);
+        font-size: 30px;
+    }
+
+    .container__logo-title{
+        font-weight: 400;
+    }
+
+    .container__logo-title-bold {
+        font-weight: 700;
+    }
+
+    .options {
+        display: flex;
+    }
+
+    .options__item {
+        padding: 0 1em;
+        text-transform: uppercase;
+        font-family: var(--font-secondary);
+        font-weight: 400;
+    }
+
+    .options__item__link {
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    .container__image__favorites {
+        display: none;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    .logo__title {
+        padding-left: 4em;
+    }
+
+    .options__menu:checked~.menu-list {
+        display: block;
+        width: auto;
+    }
+
+    .options__menu {
+        display: none;
+    }
+}
